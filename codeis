@@ -1,0 +1,13 @@
+import re
+ 
+with open(r'C:\\Users\\blabla\\blabla\\blabla\\blabla\\bookmarks.txt',encoding='utf8') as file:
+        for line in file:
+            urls = re.findall('https?://(?:[-\\w.]|(?:%[\\da-fA-F]{3}))+', line)
+            print(urls)
+
+import re
+ 
+with open(r'C:\\Users\\blabla\\blabla\\blabla\\blabla\\bookmarks.txt',encoding='utf8') as file:
+        for line in file:
+            urls = re.findall('(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])', line)
+            print(urls)
